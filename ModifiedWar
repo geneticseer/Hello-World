@@ -1,0 +1,44 @@
+<script>
+//Modified War Card Game, where each card number is comprised of rank and determines outcome.
+//Ranks are a string from the 0 to 13, regardless of suit.
+//The two classes of objects are deck and card.
+function Deck() {
+this.cards = [];
+this.count = function() {
+return this.cards.length;
+}
+this.init = function() {
+//for (s = 1; s <= 4; s++) {
+for (r = 1; r <= 13; r++) {
+this.cards.push(new Card(r, s));
+//}
+}
+}
+}
+//First, does the rank equal Joker? You lose, because you got 0.
+function Card(rank, == Joker) {
+this.rank = rank;
+//this.suit = suit;
+this.show = function() {
+console.log(this.rank + " loses. Oh, no!");
+//Second, does the rank equal Ace? You win, because you got 13.
+function Card(rank, == Ace) {
+this.rank = rank;
+this.show = function() {
+console.log(this.rank + " wins. Congratulations!");
+//Third, is the rank less than Ace? You could win if the other card is less than yours.
+function Card(rank > Joker && < Ace && < card1) {
+this.rank = rank;
+this.show = function() {
+console.log(this.rank + " loses to the other card. Try again!");
+//This is where the other card wins.
+function Card(rank > Joker && < Ace && > card1) {
+this.rank = rank;
+this.show = function() {
+console.log(this.rank + " wins. Great job!");
+}
+}
+d = new Deck();
+d.init();
+</script>
+ 
